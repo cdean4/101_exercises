@@ -31,7 +31,7 @@ def operation_to_message(op)
   when '4'
     'Dividing'
   end
-end 
+end
 
 prompt("Welcome to Calculator! Enter your name:")
 
@@ -74,14 +74,14 @@ loop do # main loop
   end
 
   operator_prompt = <<-MSG
-    What operation would you like to perform? 
+    What operation would you like to perform?
     1) addition
     2) subtraction
     3) multiplication
     4) division
   MSG
   prompt(operator_prompt)
-  
+
   operator = ''
   loop do
     operator = Kernel.gets.chomp
@@ -96,15 +96,15 @@ loop do # main loop
   prompt("#{operation_to_message(operator)} the two numbers...")
 
   result = case operator
-          when '1'
-            number1.to_i + number2.to_i
-          when '2'
-            number1.to_i - number2.to_i
-          when '3'
-            number1.to_i * number2.to_i
-          when '4'
-            number1.to_f / number2.to_f
-  end
+           when '1'
+             number1.to_i + number2.to_i
+           when '2'
+             number1.to_i - number2.to_i
+           when '3'
+             number1.to_i * number2.to_i
+           when '4'
+             number1.to_f / number2.to_f
+           end
 
   prompt("The result is #{result}")
 
