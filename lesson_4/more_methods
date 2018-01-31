@@ -1,0 +1,96 @@
+Practice Problems: Methods and More Methods lesson 4 topic 8
+
+Question 1
+What is the return value of the select method below? Why?
+[1, 2, 3].select do |num|
+  num > 5
+  'hi'
+end
+
+Answer
+The return value would be [1,2, 3] because the select method evaluated the truthiness of the return value of the last expression in the block. The last expression here in the block is ‘hi’. Since everything in Ruby is truthy (except nil and false) that means ‘hi’ is truthy, so select ends up selecting the entire original collection. That could be a problem if you didn’t mean to add the ‘hi’ part to the code.
+
+Question 2
+How does count treat the block's return value? How can we find out?
+['ant', 'bat', 'caterpillar'].count do |str|
+  str.length < 4
+end
+ 
+Answer
+From the Ruby documentation you can find out that the method count counts the number of elements that return a true value within the block. So here, the return value would be 2.
+
+Question 3
+What is the return value of reject in the following code? Why?
+[1, 2, 3].reject do |num|
+  puts num
+end
+
+Answer
+The return value here is the entire original collection [1,2, 3] because the method reject returns all the elements which are false based on the criteria in the block. The last expression in the block is puts num which returns nil. Nil is not truthy and so since it is false reject returns the full original collection.  
+
+Question 4
+What is the return value of each_with_object in the following code? Why?
+['ant', 'bear', 'cat'].each_with_object({}) do |value, hash|
+  hash[value[0]] = value
+end
+
+Answer
+This would return {“a” => “ant”, “b” => “bear”, “c” => “cat”} because the method each_with_object is making a hash out of the array it is passed. value[0] pulls the first letter from each element in the original collection and uses it as a hash key. That key is then assigned back to its original value which is now its hash value to make a key-value pair. This is done for each element in the original collection.
+
+Question 5
+What does shift do in the following code? How can we find out?
+hash = { a: 'ant', b: 'bear' }
+hash.shift
+
+Answer
+According to the documentation it removes a key-value pair from the hash and returns it as a two item array. In this case, hash.shift would return [a, “ant”] and hash would be left with just {b: ‘bear}.
+
+Question 6
+What is the return value of the following statement? Why?
+['ant', 'bear', 'caterpillar'].pop.size
+
+Answer
+The return value would be 11. The method pop removes the last value from the array and returns it. The method size counts the numbers of characters in “caterpillar” and returns that.
+
+Question 7
+What is the block's return value in the following code? How is it determined? Also, what is the return value of any? in this code. What gets output by this code?
+[1, 2, 3].any? do |num|
+  puts num
+  num.odd?
+end
+
+Answer
+The block returns true. The last expression in the block is num.odd? and this returns true since there are odd elements in the array. According to the documentation, “ The method returns true if the block ever returns a value other than false or nil.”  Therefore since the block returns true the method any? will also return true.  
+
+Question 8
+How does take work? Is it destructive? How can we find out?
+arr = [1, 2, 3, 4, 5]
+arr.take(2)
+
+Answer
+Array#take takes the specified first number of elements from an array and returns them. In this case, it will take the first two elements from arr and return them. Based on the documentation, it does not create a new array so my guess is it is not destructive. I confirmed this after running the code in Ruby.
+
+Question 9
+What is the return value of map in the following code? Why?
+{ a: 'ant', b: 'bear' }.map do |key, value|
+  if value.size > 3
+    value
+  end
+end
+
+Answer
+The return value of map is [nil, ‘bear’].  Hash#map looks at the return value of the last expression in the block which is if value.size > 3 which then evaluated as true for bear. So the method returns bear for the second element but nil for the first since if value.size > 3  evaluated as false and returned nil.
+
+Question 10
+What is the block's return value in the following code? Why?
+[1, 2, 3].map do |num|
+  if num > 1
+    puts num
+  else
+    num
+  end
+end
+
+
+Answer
+The return value of the block is [1, nil, nil]. The last expression is the if statement so for the first element it evaluates to false returns 1 (because of else num). 2 and 3 evaluate as true for num > 1 so they go on to  puts num which returns nil. Hence, [1, nil, nil].
