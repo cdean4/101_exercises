@@ -1,0 +1,111 @@
+HARD
+
+Question 1
+What do you expect to happen when the greeting variable is referenced in the last line of the code below?
+if false
+  greeting = “hello world”
+end
+
+greeting
+Answer
+It will return nil since greeting is first referenced inside the block so outside the block it has no value.
+
+Question 2
+What is the result of the last line in the code below?
+greetings = { a: 'hi' }
+informal_greeting = greetings[:a]
+informal_greeting << ' there'
+
+puts informal_greeting  #  => "hi there"
+puts greetings
+Answer
+The last line will output ‘hi there’ since informal_greeting was mutated leading to greetings being mutated because informal_greeting = greetings[:a]
+
+Question 3 
+In other practice problems, we have looked at how the scope of variables affects the modification of one "layer" when they are passed to another.
+To drive home the salient aspects of variable scope and modification of one scope by another, consider the following similar sets of code.
+What will be printed by each of these code groups?
+Answers
+A)
+def mess_with_vars(one, two, three)
+  one = two
+  two = three
+  three = one
+end
+
+one = "one"
+two = "two"
+three = "three"
+
+mess_with_vars(one, two, three)
+
+puts "one is: #{one}"
+puts "two is: #{two}"
+puts "three is: #{three}"
+The last three lines would output one, two, three respectively and return nil for each.
+
+B)
+def mess_with_vars(one, two, three)
+  one = "two"
+  two = "three"
+  three = "one"
+end
+
+one = "one"
+two = "two"
+three = "three"
+
+mess_with_vars(one, two, three)
+
+puts "one is: #{one}"
+puts "two is: #{two}"
+puts "three is: #{three}"
+This would output one, two three and return nil for each.  No change from A since one = one and one = “one” are both strings.
+
+C)
+def mess_with_vars(one, two, three)
+  one.gsub!("one","two")
+  two.gsub!("two","three")
+  three.gsub!("three","one")
+end
+
+one = "one"
+two = "two"
+three = "three"
+
+mess_with_vars(one, two, three)
+
+puts "one is: #{one}"
+puts "two is: #{two}"
+puts "three is: #{three}"
+This would output two, three, one since gsub! Is a mutating method so the objects would be permanently changed.
+
+
+Question 4
+Ben was tasked to write a simple ruby method to determine if an input string is an IP address representing dot-separated numbers. e.g. "10.4.5.11". He is not familiar with regular expressions. Alyssa supplied Ben with a method called is_an_ip_number? that determines if a string is a valid ip address number and asked Ben to use it.
+def dot_separated_ip_address?(input_string)
+  dot_separated_words = input_string.split(".")
+  while dot_separated_words.size > 0 do
+    word = dot_separated_words.pop
+    break unless is_an_ip_number?(word)
+  end
+  return true
+end
+
+
+Answer
+A little background info:
+The format of an IP address is a 32-bit numeric address written as four numbers separated by periods. Each number can be zero to 255. For example, 1.160.10.240 could be an IP address. Within an isolated network, you can assign IP addresses at random as long as each one is unique.
+
+**********************************************************************
+def dot_separated_ip_address?(input_string)
+  dot_separated_words = input_string.split(".")
+  return false unless dot_separated_words.size == 4
+
+  while dot_separated_words.size > 0 do
+    word = dot_separated_words.pop
+    return false unless is_an_ip_number?(word)
+  end
+  true
+end
+*********************************************************************************************
