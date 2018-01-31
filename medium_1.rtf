@@ -1,0 +1,432 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf110
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Consolas;
+\f3\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red245\green245\blue245;\red246\green246\blue239;
+\red53\green57\blue60;\red152\green224\blue36;\red157\green101\blue255;\red47\green255\blue18;\red38\green38\blue38;
+\red245\green245\blue245;\red88\green209\blue235;\red53\green57\blue60;\red246\green246\blue239;\red224\green213\blue97;
+\red157\green101\blue255;\red0\green255\blue0;\red152\green224\blue36;\red244\green0\blue95;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{lower-roman\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww8500\viewh14480\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 LESSON 3 - TOPIC 4 - MEDIUM 1\
+\
+Question 1
+\b0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 For this practice problem, write a one-line program that creates the following output 10 times, with the subsequent line indented 1 space to the right:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf4 \cb5 \strokec4 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 The Flintstones Rock!\
+ The Flintstones Rock!\
+  The Flintstones Rock!\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \shad0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Answer\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0 \cf0  10.times do |number| \
+    puts (" " * number) + "The Flintstones Rock!"\
+ end
+\b \
+
+\b0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Question 2\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The result of the following statement will be an error:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf4 \cb5 \strokec4 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 puts \cf6 \strokec6 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "the value of 40 + 2 is "\cf4 \strokec4 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  + (\cf7 \strokec7 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 40\cf4 \strokec4 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  + \cf7 \strokec7 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 2\cf4 \strokec4 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf4 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\strokec2 \shad0 Why is this and what are two possible ways to fix this?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Answer
+\b0  \
+The statement uses a combination of strings and integers and since it starts with a string you have to convert (40 + 2) to a string. As it is, its an integer. To fix this you could do:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \cf8 \cb0 \CocoaLigature0 puts "the value of 40 + 2 is " + (40 + 2).to_s
+\f0 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Or you could just convert 40 + 2 directly to 42 and have:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \cf8 \cb0 \CocoaLigature0 puts "the value of 40 + 2 is 42\'94
+\f0 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Question 3\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+Alan wrote the following method, which was intended to show all of the factors of the input number:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 factors\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (number)\
+  dividend = number\
+  divisors = []\
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 begin\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    divisors << number / dividend \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 if\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  number % dividend == \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 0\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    dividend -= \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 1\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 until\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  dividend == \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 0\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  divisors\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \shad0 Alyssa noticed that this will fail if the input is\'a0
+\f2\fs26 \cb16 0
+\f1\fs32 ,\cb10  or a negative number, and asked Alan to change the loop. How can you make this work without using\cb16 \'a0
+\f2\fs26 begin
+\f1\fs32 /
+\f2\fs26 end
+\f1\fs32 /
+\f2\fs26 until
+\f1\fs32 \cb10 ? Note that we're not looking to find the factors for 0 or negative numbers, but we just want to handle it gracefully instead of raising an exception or going into an infinite loop.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 factors\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (number)\
+  dividend = number\
+  divisors = []\
+  loop do\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0     if number <= 0 puts \'91Please enter a number greater than 0\'92\
+      else break\
+    end\
+  end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 begin\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    divisors << number / dividend \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 if\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  number % dividend == \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 0\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    dividend -= \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 1\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 until\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  dividend == \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 0\
+\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  divisors\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \shad0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 My code:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f3\b0 \cf0 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado76 \shadc0 def factors(number)\
+  dividend = number\
+  divisors = []\
+\
+  loop do\
+    if number <= 0 \
+      puts \'93Please enter a number greater than 0\'94\
+    else\
+      break\
+    end\
+      break\
+  end\
+\
+  begin\
+    divisors << number / dividend if number % dividend == 0\
+    dividend -= 1\
+  end until dividend == 0\
+\
+  divisors\
+end
+\f0 \kerning1\expnd0\expndtw0 \shad0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Answer
+\b0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	i.	}You need to put in a prompt that has the user pick a number >= zero. Almost had but still has a few kinks.\
+{\listtext	ii.	}
+\b Bonus 1
+\b0  - The number % dividend == 0 finds the factors of number to add to the divisors variable.\
+{\listtext	iii.	}
+\b Bonus 2
+\b0  - divisors at the second to last line calls the divisors object so that its your return value of the method factors  instead of just nil.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Question 4
+\b0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+Alyssa was asked to write an implementation of a rolling buffer. Elements are added to the rolling buffer and if the buffer becomes full, then new elements that are added will displace the oldest elements in the buffer.\
+She wrote two implementations saying, "Take your pick. Do you like\'a0
+\f2\fs26 \cb0 <<
+\f1\fs32 \cb10 \'a0or\'a0
+\f2\fs26 \cb0 +
+\f1\fs32 \cb10 \'a0for modifying the buffer?". Is there a difference between the two, other than what operator she chose to use to add an element to the buffer?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rolling_buffer1\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (buffer, max_buffer_size, new_element)\
+  buffer << new_element\
+  buffer.shift \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 if\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  buffer.size > max_buffer_size\
+  buffer\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rolling_buffer2\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (input_array, max_buffer_size, new_element)\
+  buffer = input_array + [new_element]\
+  buffer.shift \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 if\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  buffer.size > max_buffer_size\
+  buffer\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \cb1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Answer
+\b0 \
+<< modifies the caller so buffer is permanently changed from what was first entered into the method. + does not modify the caller so buffer would not \'93\'94\'94\'94\'94\'94\'94\'94\'94\'94\'94\'94\'94\}\}\}[be changed.\
+\
+
+\b Question 5 
+\b0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+Alyssa asked Ben to write up a basic implementation of a Fibonacci calculator, A user passes in two numbers, and the calculator will keep computing the sequence until some limit is reached.\
+Ben coded up this implementation but complained that as soon as he ran it, he got an error. Something about the limit variable. What's wrong with the code?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf13 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 limit = \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 15\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 fib\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (first_num, second_num)\
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 while\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  second_num < limit\
+    sum = first_num + second_num\
+    first_num = second_num\
+    second_num = sum\
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  sum\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+result = \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 fib\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (\cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 0\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 1\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )\
+puts \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "result is \cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 #\{\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 result\cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \}\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "\cf13 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\shad0 How would you fix this so that it works?
+\f0\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf0 Answer\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b0 \cf0 You need to move the limit variable from the main scope to the inner scope. This is what I did:\
+************************************************\
+\
+def fib(first_num, second_num, limit)\
+  while second_num < limit\
+    sum = first_num + second_num\
+    first_num = second_num\
+    second_num = sum\
+  end\
+  sum\
+end\
+\
+result = fib(0, 1, 15)\
+puts "result is #\{result\}"\
+************************************************\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b \cf0 \
+Question 6\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+In an earlier practice problem we saw that depending on variables to be modified by called methods can be tricky:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 tricky_method\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (a_string_param, an_array_param)\
+  a_string_param += \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rutabaga"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  an_array_param << \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rutabaga"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+my_string = \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "pumpkins"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+my_array = [\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "pumpkins"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ]\
+\cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 tricky_method\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (my_string, my_array)\
+\
+puts \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "My string looks like this now: \cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 #\{\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 my_string\cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \}\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+puts \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "My array looks like this now: \cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 #\{\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 my_array\cf18 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \}\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl480\partightenfactor0
+\cf13 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\shad0 We learned that whether the above "coincidentally" does what we think we wanted "depends" upon what is going on inside the method.\
+How can we refactor this practice problem to make the result easier to predict and easier for the next programmer to maintain?\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 Answer\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b0 \cf0  I changed a_string_param += \'93rutabaga\'94 to a_string_param << \'93rutabaga\'94 and then I flattened the result in the last line of code using the flatten method.\
+******************************************************************************\
+def not_so_tricky_method(a_string_param, an_array_param)\
+  a_string_param << "rutabaga"\
+  an_array_param << ["rutabaga"]\
+\
+  return a_string_param, an_array_param\
+end\
+\
+my_string = "pumpkins"\
+my_array = ["pumpkins"]\
+my_string, my_array = not_so_tricky_method(my_string, my_array)\
+\
+puts "My string looks like this now: #\{my_string\}"\
+puts "My array looks like this now: #\{my_array.flatten\}"\
+*****************************************************************************\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b \cf0 \
+Question 7\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+What is the output of the following code?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf13 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 answer = \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 42\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 mess_with_it\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (some_number)\
+  some_number += \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 8\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+new_answer = \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 mess_with_it\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (answer)\
+\
+p answer - \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 8\cf13 \cb1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b \cf0 Answer
+\b0 \
+This will output 34 since the answer variable does not get mutated by the method so the original value for answer is used in the last line of code.\
+\
+
+\b Question 8\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+One day Spot was playing with the Munster family's home computer and he wrote a small program to mess with their demographic data:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf13 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 munsters = \{\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "Herman"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \{ \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 32\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "male"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \},\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "Lily"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \{ \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 30\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "female"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \},\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "Grandpa"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \{ \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 402\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "male"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \},\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "Eddie"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \{ \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 10\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "male"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \},\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "Marilyn"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \{ \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 23\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  => \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "female"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \}\
+\}\
+\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 mess_with_demographics\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (demo_hash)\
+  demo_hash.values.\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 each\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 do\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  |family_member|\
+    family_member[\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "age"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ] += \cf15 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 42\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    family_member[\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "gender"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ] = \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "other"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \shad0 After writing this method, he typed the following...and before Grandpa could stop him, he hit the Enter key with his tail:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf14 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 mess_with_demographics\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (munsters)\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf13 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\shad0 Did the family's data get ransacked? Why or why not?\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 Answer
+\b0 \
+Yes the family\'92s data did get permanently changed because the \'93mess_with_demographics\'94 method used the object_ids of the parameters instead of the values of the parameters. So the munsters hash got assigned new values after being passed into the method and the changes were set in stone.\
+\
+
+\b Question 9\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+Method calls can take expressions as arguments. Suppose we define a function called\'a0
+\f2\fs26 \cf16 \cb0 rps
+\f1\fs32 \cf9 \cb10 \'a0as follows, which follows the classic rules of rock-paper-scissors game, but with a slight twist that it declares whatever hand was used in the tie as the result of that tie.\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rps\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (fist1, fist2)\
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 if\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  fist1 == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    (fist2 == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "paper"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ) ? \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "paper"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  : \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 elsif\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  fist1 == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "paper"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    (fist2 == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "scissors"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ) ? \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "scissors"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  : \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "paper"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 else\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+    (fist2 == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ) ? \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  : \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "scissors"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+  \cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\shad0 What is the result of the following call?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf13 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 puts \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rps\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (\cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rps\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (\cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rps\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "paper"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 ), \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 rps\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (\cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 , \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "scissors"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )), \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "rock"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )\cb1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+Answer\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b0 \cf0 The output would be paper and it would return nil.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b \cf0 \
+Question 10\
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1\b0\fs32 \cf9 \cb10 \expnd0\expndtw0\kerning0
+Consider these two simple methods:\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf11 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 foo\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (param = \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "no"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )\
+  \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "yes"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 def\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  \cf14 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 bar\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (param = \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "no"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 )\
+  param == \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "no"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  ? \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "yes"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0  : \cf17 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 "no"\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\cf11 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 end\cf13 \cb1 \kerning1\expnd0\expndtw0 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl560\sa420\partightenfactor0
+
+\f1 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\shad0 What would be the return value of the following method invocation?\
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f2 \cf14 \cb12 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 bar\cf13 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 (foo)\cb1 \shad\shadx0\shady-20\shadr0\shado76 \shadc0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0  Answer\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b0 \cf0 foo can only return \'91yes\'92 so you\'92d be evaluating bar(yes). By line 4, you\'92d have bar(yes = \'91no\'92) and the next line of code would be asking the question \'93Is yes == no ? Yes or no? This is not true so it would select \'93no\'94 as the final output.
+\b \
+}
