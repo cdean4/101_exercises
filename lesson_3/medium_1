@@ -1,0 +1,237 @@
+LESSON 3 - TOPIC 4 - MEDIUM 1
+
+Question 1
+For this practice problem, write a one-line program that creates the following output 10 times, with the subsequent line indented 1 space to the right:
+The Flintstones Rock!
+ The Flintstones Rock!
+  The Flintstones Rock!
+
+Answer
+ 10.times do |number| 
+    puts (" " * number) + "The Flintstones Rock!"
+ end
+
+
+Question 2
+The result of the following statement will be an error:
+puts "the value of 40 + 2 is " + (40 + 2)
+
+Why is this and what are two possible ways to fix this?
+Answer 
+The statement uses a combination of strings and integers and since it starts with a string you have to convert (40 + 2) to a string. As it is, its an integer. To fix this you could do:
+puts "the value of 40 + 2 is " + (40 + 2).to_s
+Or you could just convert 40 + 2 directly to 42 and have:
+puts "the value of 40 + 2 is 42”
+
+
+Question 3
+Alan wrote the following method, which was intended to show all of the factors of the input number:
+def factors(number)
+  dividend = number
+  divisors = []
+  begin
+    divisors << number / dividend if number % dividend == 0
+    dividend -= 1
+  end until dividend == 0
+  divisors
+end
+Alyssa noticed that this will fail if the input is 0, or a negative number, and asked Alan to change the loop. How can you make this work without using begin/end/until? Note that we're not looking to find the factors for 0 or negative numbers, but we just want to handle it gracefully instead of raising an exception or going into an infinite loop.
+def factors(number)
+  dividend = number
+  divisors = []
+  loop do
+    if number <= 0 puts ‘Please enter a number greater than 0’
+      else break
+    end
+  end
+
+  begin
+    divisors << number / dividend if number % dividend == 0
+    dividend -= 1
+  end until dividend == 0
+
+  divisors
+end
+
+
+My code:
+def factors(number)
+  dividend = number
+  divisors = []
+
+  loop do
+    if number <= 0 
+      puts “Please enter a number greater than 0”
+    else
+      break
+    end
+      break
+  end
+
+  begin
+    divisors << number / dividend if number % dividend == 0
+    dividend -= 1
+  end until dividend == 0
+
+  divisors
+end
+
+Answer
+	i.	You need to put in a prompt that has the user pick a number >= zero. Almost had but still has a few kinks.
+	ii.	Bonus 1 - The number % dividend == 0 finds the factors of number to add to the divisors variable.
+	iii.	Bonus 2 - divisors at the second to last line calls the divisors object so that its your return value of the method factors  instead of just nil.
+
+Question 4
+Alyssa was asked to write an implementation of a rolling buffer. Elements are added to the rolling buffer and if the buffer becomes full, then new elements that are added will displace the oldest elements in the buffer.
+She wrote two implementations saying, "Take your pick. Do you like << or + for modifying the buffer?". Is there a difference between the two, other than what operator she chose to use to add an element to the buffer?
+def rolling_buffer1(buffer, max_buffer_size, new_element)
+  buffer << new_element
+  buffer.shift if buffer.size > max_buffer_size
+  buffer
+end
+
+def rolling_buffer2(input_array, max_buffer_size, new_element)
+  buffer = input_array + [new_element]
+  buffer.shift if buffer.size > max_buffer_size
+  buffer
+end
+
+Answer
+<< modifies the caller so buffer is permanently changed from what was first entered into the method. + does not modify the caller so buffer would not “””””””””””””}}}[be changed.
+
+Question 5 
+Alyssa asked Ben to write up a basic implementation of a Fibonacci calculator, A user passes in two numbers, and the calculator will keep computing the sequence until some limit is reached.
+Ben coded up this implementation but complained that as soon as he ran it, he got an error. Something about the limit variable. What's wrong with the code?
+limit = 15
+
+def fib(first_num, second_num)
+  while second_num < limit
+    sum = first_num + second_num
+    first_num = second_num
+    second_num = sum
+  end
+  sum
+end
+
+result = fib(0, 1)
+puts "result is #{result}"
+How would you fix this so that it works?
+Answer
+You need to move the limit variable from the main scope to the inner scope. This is what I did:
+************************************************
+
+def fib(first_num, second_num, limit)
+  while second_num < limit
+    sum = first_num + second_num
+    first_num = second_num
+    second_num = sum
+  end
+  sum
+end
+
+result = fib(0, 1, 15)
+puts "result is #{result}"
+************************************************
+
+Question 6
+In an earlier practice problem we saw that depending on variables to be modified by called methods can be tricky:
+def tricky_method(a_string_param, an_array_param)
+  a_string_param += "rutabaga"
+  an_array_param << "rutabaga"
+end
+
+my_string = "pumpkins"
+my_array = ["pumpkins"]
+tricky_method(my_string, my_array)
+
+puts "My string looks like this now: #{my_string}"
+puts "My array looks like this now: #{my_array}"
+
+We learned that whether the above "coincidentally" does what we think we wanted "depends" upon what is going on inside the method.
+How can we refactor this practice problem to make the result easier to predict and easier for the next programmer to maintain?
+Answer
+ I changed a_string_param += “rutabaga” to a_string_param << “rutabaga” and then I flattened the result in the last line of code using the flatten method.
+******************************************************************************
+def not_so_tricky_method(a_string_param, an_array_param)
+  a_string_param << "rutabaga"
+  an_array_param << ["rutabaga"]
+
+  return a_string_param, an_array_param
+end
+
+my_string = "pumpkins"
+my_array = ["pumpkins"]
+my_string, my_array = not_so_tricky_method(my_string, my_array)
+
+puts "My string looks like this now: #{my_string}"
+puts "My array looks like this now: #{my_array.flatten}"
+*****************************************************************************
+
+Question 7
+What is the output of the following code?
+answer = 42
+
+def mess_with_it(some_number)
+  some_number += 8
+end
+
+new_answer = mess_with_it(answer)
+
+p answer - 8
+
+Answer
+This will output 34 since the answer variable does not get mutated by the method so the original value for answer is used in the last line of code.
+
+Question 8
+One day Spot was playing with the Munster family's home computer and he wrote a small program to mess with their demographic data:
+munsters = {
+  "Herman" => { "age" => 32, "gender" => "male" },
+  "Lily" => { "age" => 30, "gender" => "female" },
+  "Grandpa" => { "age" => 402, "gender" => "male" },
+  "Eddie" => { "age" => 10, "gender" => "male" },
+  "Marilyn" => { "age" => 23, "gender" => "female"}
+}
+
+def mess_with_demographics(demo_hash)
+  demo_hash.values.each do |family_member|
+    family_member["age"] += 42
+    family_member["gender"] = "other"
+  end
+end
+After writing this method, he typed the following...and before Grandpa could stop him, he hit the Enter key with his tail:
+mess_with_demographics(munsters)
+
+Did the family's data get ransacked? Why or why not?
+Answer
+Yes the family’s data did get permanently changed because the “mess_with_demographics” method used the object_ids of the parameters instead of the values of the parameters. So the munsters hash got assigned new values after being passed into the method and the changes were set in stone.
+
+Question 9
+Method calls can take expressions as arguments. Suppose we define a function called rps as follows, which follows the classic rules of rock-paper-scissors game, but with a slight twist that it declares whatever hand was used in the tie as the result of that tie.
+def rps(fist1, fist2)
+  if fist1 == "rock"
+    (fist2 == "paper") ? "paper" : "rock"
+  elsif fist1 == "paper"
+    (fist2 == "scissors") ? "scissors" : "paper"
+  else
+    (fist2 == "rock") ? "rock" : "scissors"
+  end
+end
+What is the result of the following call?
+puts rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock")
+
+Answer
+The output would be paper and it would return nil.
+
+Question 10
+Consider these two simple methods:
+def foo(param = "no")
+  "yes"
+end
+
+def bar(param = "no")
+  param == "no" ? "yes" : "no"
+end
+What would be the return value of the following method invocation?
+bar(foo)
+ Answer
+foo can only return ‘yes’ so you’d be evaluating bar(yes). By line 4, you’d have bar(yes = ‘no’) and the next line of code would be asking the question “Is yes == no ? Yes or no? This is not true so it would select “no” as the final output.
