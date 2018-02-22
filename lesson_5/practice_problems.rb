@@ -224,6 +224,7 @@ arr.sort_by do |sub_arr|
   end
 end
 
+
 # Practice Problem 14
 # Given this data structure write some code to return an array containing the colors of 
 # the fruits and the sizes of the vegetables. The sizes should be uppercase and the colors 
@@ -240,13 +241,12 @@ hsh = {
 
 [["Red", "Green"], "MEDIUM", ["Red", "Green"], ["Orange"], "LARGE"]
 
-
 color_size = []
 
 hsh.each_value do |details|
   if details[:type] == 'fruit'
-    details[:colors].map do |v|
-      v.capitalize  # Still trying to get the array to capitalize. 
+    h = details[:colors].map! do |v|
+      v.capitalize 
     end
     color_size << details[:colors]
   elsif details[:type] == 'vegetable'
@@ -255,8 +255,6 @@ hsh.each_value do |details|
 end
 
 color_size
-#  => [["red", "green"], "MEDIUM", ["red", "green"], ["orange"], "LARGE"] 
-
 
 # Launch School solution is below:
 hsh.map do |_, value|
