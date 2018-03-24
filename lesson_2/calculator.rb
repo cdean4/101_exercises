@@ -1,17 +1,3 @@
-# ask the user for two numbers
-# ask the user for an operation to perform
-# perform the operation on the two numbers
-# output the result
-
-# answer = Kernel.gets()
-# Kernel.puts(answer)
-
-# NOTES
-# 1 - always leave one blank line once code is done
-# 2 - remove any extra space at the end of a line of code
-# 3 - Use this as a template to remember the format for RUBY
-# 4 - leave a space after the # sign when you write a comment
-
 def prompt(message)
   Kernel.puts("=> #{message}")
 end
